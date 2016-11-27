@@ -6,13 +6,13 @@ import scala.io.Source
 import scala.util.matching.Regex
 
 
-object WikiScrape {
+object Categories {
 
   //todo: add functionality to save found categories
   // todo: put in different urls
   // todo: clean up data somehow
 
-  val categories =
+  val list: List[Category] =
     catPage("https://en.wikipedia.org/wiki/Portal:Contents/Lists")
 
   def catPage(u: String): List[Category] = {
